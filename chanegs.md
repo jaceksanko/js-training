@@ -447,7 +447,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     console.log(Math.max(...[-10, 30, 10, 20])); //30
     console.log(Math.max(-10, ...[-50, 10], 30)); //30
     ```
-    2. In Array literals and strings, the spread operator turns iterable values into Array elements
+    1. In Array literals and strings, the spread operator turns iterable values into Array elements
 
     ```js
     console.log([1, ...[2,3], 4, ...[5, 6, 7]]); // 1, 2, 3, 4, 5, 6, 7
@@ -568,7 +568,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     export { PI, add, multiply };
     ```
 
-    2. Default Exports (One per module)
+    1. Default Exports (One per module)
 
     If we want to export a single value, you could use a default export
 
@@ -949,7 +949,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     console.log(john.fullName); // John Doe
     ```
 
-    2. **Calling a function using Reflect.apply():**
+    1. **Calling a function using Reflect.apply():**
     Prior to ES6, you can invoke a function with a specified `this` value and arguments by using the `Function.prototype.apply()` method.
 
     For example, you can call `max()` static method of Math object,
@@ -964,7 +964,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     const max = Reflect.apply(Math.max, Math, [100, 200, 300]);
     console.log(max);
     ```
-    3. **Defining a property using Reflect.defineProperty():**
+    1. **Defining a property using Reflect.defineProperty():**
     The `Reflect.defineProperty()` method is similar to `Object.defineProperty()` but it returns a Boolean value indicating whether or not the property was defined successfully instead of throwing an exception.
 
     The syntax of this method looks like below,
@@ -998,7 +998,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     }
     ```
 
-    4. **Delete property using Reflect.deleteProperty():**
+    1. **Delete property using Reflect.deleteProperty():**
 
     The `Reflect.deleteProperty()` method is used to delete properties like the delete operator but as a function. It returns Boolean value indicating whether or not the property was successfully deleted.
 
@@ -1012,7 +1012,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     console.log(user.age); // undefined
     ```
 
-    5. **Get property of an object using Reflect.get():**
+    1. **Get property of an object using Reflect.get():**
     The `Reflect.get` method is used to get a property on an object like the property accessor syntax but as a function.
 
     ```js
@@ -1024,7 +1024,7 @@ Each proposal for an ECMAScript feature goes through the following maturity stag
     console.log(Reflect.get(user, 'age')); // 33
     ```
 
-    6. **:**
+    1. **:**
 
     **[⬆ Back to Top](#table-of-contents)**
 

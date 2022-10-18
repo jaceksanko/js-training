@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "start": "npx babel-node es2015/index.js"
+    "start": "npx babel-node test.js module-one.js"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
