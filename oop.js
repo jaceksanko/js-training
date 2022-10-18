@@ -55,3 +55,34 @@ const child = new Child('Jan');
 console.log(child.getDescription());
 console.log(`Is Parent: ${child instanceof Parent}`); 
 console.log(`Is Child: ${child instanceof Child}`);
+
+/*
+
+function test(value) {
+    const multipler = 2;
+    return value * multipler;
+}
+
+function IncremenmtalGenerator() {
+    let counter = 0;
+    this.next = () => ++counter; 
+}
+
+function RandomGenerator() {
+    this.next = () => Math.random();
+}
+
+function Account(generator) {
+    if (!(this instanceof Account)) { // safe constructor
+        return new Account();
+    }
+    this.id = generator.next();
+    this.balance = 0;
+}
+
+const generator = new RandamGenerator();
+
+const account = new Account(generator);
+console.log(account.id);
+
+*/

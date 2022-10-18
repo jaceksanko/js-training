@@ -26,6 +26,7 @@ const LIBRARY = (function(window) {
     const namespace = (name, module) => name.split('.')
         .reduce((namespace, part) => addPlaceholder(namespace, part, module)[part], rootNamespace);
 
+
     /*
     const bind = function(context, fn) {
         return function() {
@@ -48,9 +49,8 @@ const LIBRARY = (function(window) {
 
 
 LIBRARY.onReady(($) => {
-    const testModule = $.namespace('pl.training.test');
-    const fpModule = $.namespace('pl.training.fp', (() => {
-        return {a: 5};
-    })());
-    const root = $.rootNamespace;
 });
+
+
+
+
