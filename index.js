@@ -50,7 +50,3 @@ const LIBRARY = (function(window) {
 
 LIBRARY.onReady(($) => {
 });
-
-
-
-
