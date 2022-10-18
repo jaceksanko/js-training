@@ -2,6 +2,7 @@
 
 const LIBRARY = (function(window) {
     const version = '1.0';
+    const rootNamespace = {};
     const getVersion = () => `Version ${version}`;
     const forEach = (selector, task) => document.querySelectorAll(selector).forEach(task);
     const addListener = (target, eventName, listener, context) => target.addEventListener(eventName, listener.bind(context || target) /*bind(context || target, listener)*/);
@@ -13,9 +14,17 @@ const LIBRARY = (function(window) {
             TemporaryConstructor.prototype = Parent.prototype;
             Child.prototype = new TemporaryConstructor();
             Child.uber = Parent.prototype;
-            Child.prototype.constructor = Child; 
+            Child.prototype.constructor = Child;
         };
     })();
+    const addPlaceholder = (object, key, placeholder = {}) => {
+        if (!object.hasOwnProperty(key)) {
+            object[key] = placeholder;
+        }
+        return object;
+    };
+    const namespace = (name, module) => name.split('.')
+        .reduce((namespace, part) => addPlaceholder(namespace, part, module)[part], rootNamespace);
 
     /*
     const bind = function(context, fn) {
@@ -31,11 +40,17 @@ const LIBRARY = (function(window) {
         getVersion,
         on,
         onReady,
-        extend
+        extend,
+        namespace,
+        rootNamespace
     };
 })(window);
 
 
 LIBRARY.onReady(($) => {
-
+    const testModule = $.namespace('pl.training.test');
+    const fpModule = $.namespace('pl.training.fp', (() => {
+        return {a: 5};
+    })());
+    const root = $.rootNamespace;
 });
