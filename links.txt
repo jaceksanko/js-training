@@ -11,6 +11,7 @@ https://www.dofactory.com/javascript/design-patterns
 - FP 
 https://leanpub.com/composingsoftware
 https://leanpub.com/functional-programming-in-js-with-categories
+https://leanpub.com/functional-programming-in-Ts-with-categories
 https://leanpub.com/asynchronous-javascript
 https://github.com/monet/monet.js
 https://book.purescript.org/index.html
